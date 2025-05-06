@@ -9,9 +9,10 @@ const baseURL = isDev
 
 
 
-const api = axios.create({
-  baseURL,
-  withCredentials: true, // critical for sending cookies!
-});
+  const api = axios.create({
+    baseURL: import.meta.env.VITE_PUBLIC_API_URL,
+    withCredentials: true,
+  });
+  
 
 export default api;
